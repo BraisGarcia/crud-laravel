@@ -23,3 +23,5 @@ Route::get('/hola', function(){
 Route::get('/user/{id}', function($id){
     return 'Mi codigo es:' . $id;
 });
+
+Route::get('/', 'StudentController@index')->name('home');
