@@ -16,5 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/hola', function(){
-    return view('hola mundo');
+    return 'hola mundo';
+});
+
+
+Route::get('/user/{id}', function($id){
+    return 'Mi codigo es:' . $id;
 });
