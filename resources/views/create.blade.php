@@ -1,12 +1,14 @@
 @extends('layouts.main')
 @section('content')
 <!-- Default form login -->
-<form class="text-center border border-light p-5" action="#!">
+<form class="text-center border border-light p-5" action="{{route('store')}}" method="POST">
 
+
+    {{ csrf_field()}}
     <p class="h4 mb-4">Alumno</p>
 
 
-    <input type="Nombre" id="defaultLoginFormEmail" class="form-control mb-4" name="nombre" placeholder="Nombre">
+    <input type="nombre" id="defaultLoginFormEmail" class="form-control mb-4" name="nombre" placeholder="Nombre">
 
 
     <input type="apellidos" id="defaultLoginFormPassword" class="form-control mb-4" name="apellidos" placeholder="apellidos">
