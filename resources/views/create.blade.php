@@ -1,5 +1,13 @@
 @extends('layouts.main')
 @section('content')
+
+@if ($errors->any())
+    @foreach ($errors->all() as $errors)
+        <div class="alert alert-danger" role="alert">
+        {{$errors}}
+        </div>
+    @endforeach
+@endif
 <!-- Default form login -->
 <form class="text-center border border-light p-5" action="{{route('store')}}" method="POST">
 
