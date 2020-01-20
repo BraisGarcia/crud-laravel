@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function index(){
-        returnview('welcome');
+        return view('welcome');
+    }
+
+    public function create(){
+        
+        return view('create');
     }
 }
