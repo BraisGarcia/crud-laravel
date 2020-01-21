@@ -8,7 +8,8 @@ use App\students;
 class StudentController extends Controller
 {
     public function index(){
-        return view('welcome');
+        $estudiantes = students::all();
+        return view('welcome', compact('estudiantes'));
     }
 
     public function create(){
