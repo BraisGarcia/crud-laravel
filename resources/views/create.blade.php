@@ -2,33 +2,46 @@
 @section('content')
 
 @if ($errors->any())
-    @foreach ($errors->all() as $errors)
+    @foreach ($errors->all() as $error)
         <div class="alert alert-danger" role="alert">
-        {{$errors}}
+        {{$error}}
         </div>
     @endforeach
 @endif
-<!-- Default form login -->
-<form class="text-center border border-light p-5" action="{{route('store')}}" method="POST">
 
+<!-- Default form register -->
+<form class="text-center border border-light p-5" action="{{route('store') }}" method="POST">
 
-    {{ csrf_field()}}
+{{ csrf_field() }}
     <p class="h4 mb-4">Alumno</p>
 
+    <div class="form-row mb-4">
+        <div class="col">
+            <!-- First name -->
+            <input type="text" id="defaultRegisterFormFirstName" class="form-control" name= "nombre" placeholder="Nombre">
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" class="form-control" name= "apellidos" placeholder="Apellidos">
+        </div>
+    </div>
 
-    <input type="nombre" id="defaultLoginFormEmail" class="form-control mb-4" name="nombre" placeholder="Nombre">
+    <!-- E-mail -->
+    <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" name="email" placeholder="E-mail">
 
+    
+    <!-- Phone number -->
+    <input type="text" id="defaultRegisterPhonePassword" class="form-control" name="telefono" placeholder="Telefono" >
+ 
 
-    <input type="apellidos" id="defaultLoginFormPassword" class="form-control mb-4" name="apellidos" placeholder="apellidos">
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" type="submit">Añadir</button>
 
-    <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" name="email" placeholder="E-mail">
-
-    <!-- Password -->
-    <input type="telefono" id="defaultLoginFormPassword" class="form-control mb-4" name="telefono" placeholder="telefono">
-
-    <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">añadir</button>
+    
 
 </form>
-<!-- Default form login -->
+<!-- Default form register -->
+
+
+
 @endsection

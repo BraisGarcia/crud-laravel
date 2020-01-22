@@ -21,13 +21,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('/create')}}">añadir</a>
+        <a class="nav-link" href="{{url('/create')}}">Añadir</a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">Pricing</a>
       </li>
 
-      <!-- Dropdown -->
+      Dropdown
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -39,14 +39,14 @@
       </li>
 
     </ul>
-    <!-- Links -->
-
+    Links -->
+<!-- 
     <form class="form-inline">
       <div class="md-form my-0">
         <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
       </div>
     </form>
-  </div>
+  </div> -->
   <!-- Collapsible content -->
 
 </nav>
